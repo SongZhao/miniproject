@@ -27,7 +27,7 @@ void main()
 	}
 	fclose(fptr);
 
-	/Write 1 MB file
+	//Write 1 MB file
 	FILE *fptr1, *fptr2;
  
     // Open file for reading
@@ -57,5 +57,5 @@ void main()
     printf("\nContents copied");
  
     fclose(fptr1);
-    fclose(fptr2);/
+    fclose(fptr2);
 }
