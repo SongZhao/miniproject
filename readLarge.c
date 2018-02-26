@@ -11,7 +11,7 @@
 void main()
 {
 	FILE *fptr;
-	printf("reading 1MB file");
+	printf("reading 10MB file");
 	char ch, c;
 	fptr = fopen("../../miniproject/1MB.txt", "r");
 	if(fptr == NULL)
@@ -27,11 +27,11 @@ void main()
 	}
 	fclose(fptr);
 
-	//Write 1 MB file
+	/Write 1 MB file
 	FILE *fptr1, *fptr2;
  
     // Open file for reading
-    fptr1 = fopen("../../miniproject/1MB.txt", "r");
+    fptr1 = fopen("../../miniproject/10MB.txt", "r");
     if (fptr1 == NULL)
     {
         printf("cannot open file\n");
@@ -39,7 +39,7 @@ void main()
     }
 
     // Open another file for writing
-    fptr2 = fopen("../../miniproject/1MBcopy.txt", "w");
+    fptr2 = fopen("../../miniproject/10MBcopy.txt", "w");
     if (fptr2 == NULL)
     {
         printf("cannot open file\n");
@@ -57,5 +57,5 @@ void main()
     printf("\nContents copied");
  
     fclose(fptr1);
-    fclose(fptr2);
+    fclose(fptr2);/
 }
