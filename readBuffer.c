@@ -24,7 +24,7 @@ void main()
   if (!buffer)
       exit(-1);
 */
-  FILE *inFp = fopen("10MB.txt", "r");
+  FILE *inFp = fopen("../miniproject/10MB.txt", "r");
   if (inFp == NULL)
   {
     printf("cannot open input file\n");
@@ -51,7 +51,7 @@ int i;
 char c[1];
 char path1[50] = "outputfile";
 char path2[12] = "1";
-for(i = 0; i < 10; i++){
+for(i = 0; i < 20; i++){
   unsigned char *buffer = NULL;
   buffer = malloc(COPY_BUFFER_MAXSIZE);
   uint64_t outFileSizeCounter = fileSize; 
@@ -59,7 +59,7 @@ for(i = 0; i < 10; i++){
       exit(-1);
   strcat(path1,path2);
   outFp = fopen(path1 , "w");
-  printf("path is %s", path1);	 
+  //printf("path is %s", path1);	 
   if (outFp == NULL)
   {              
      printf("cannot open output file\n");
@@ -71,6 +71,7 @@ for(i = 0; i < 10; i++){
           fread(buffer, 1, (size_t) COPY_BUFFER_MAXSIZE, inFp);
           fwrite(buffer, 1, (size_t) COPY_BUFFER_MAXSIZE, outFp);
           outFileSizeCounter -= COPY_BUFFER_MAXSIZE;
+         // printf("write\n");
       }
       else {
           fread(buffer, 1, (size_t) outFileSizeCounter, inFp);
