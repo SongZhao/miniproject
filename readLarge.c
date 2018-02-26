@@ -13,7 +13,7 @@ void main()
 	FILE *fptr;
 	printf("reading 1MB file");
 	char ch, c;
-	fptr = fopen("1MB.txt", "r");
+	fptr = fopen("../../miniproject/1MB.txt", "r");
 	if(fptr == NULL)
 	{
 		printf("cannot open file \n");
@@ -31,7 +31,7 @@ void main()
 	FILE *fptr1, *fptr2;
  
     // Open file for reading
-    fptr1 = fopen("1MB.txt", "r");
+    fptr1 = fopen("../../miniproject/1MB.txt", "r");
     if (fptr1 == NULL)
     {
         printf("cannot open file\n");
@@ -39,7 +39,7 @@ void main()
     }
 
     // Open another file for writing
-    fptr2 = fopen("1MBcopy.txt", "w");
+    fptr2 = fopen("../../miniproject/1MBcopy.txt", "w");
     if (fptr2 == NULL)
     {
         printf("cannot open file\n");
